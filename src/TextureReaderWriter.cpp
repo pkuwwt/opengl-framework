@@ -252,10 +252,10 @@ void TextureReaderWriter::readJPEGPicture(const std::string& filename,
 
     unsigned long size = x * y * 3;
 
-    BYTE* data = new BYTE[size];
+    unsigned char* data = new unsigned char[size];
 
-    BYTE* p1 = data;
-    BYTE** p2 = &p1;
+    unsigned char* p1 = data;
+    unsigned char** p2 = &p1;
     int numlines = 0;
 
     while(info.output_scanline < info.output_height) {
